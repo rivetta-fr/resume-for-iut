@@ -26,3 +26,17 @@
   });
 
 })(jQuery); // End of use strict
+
+var observer = new IntersectionObserver(function(entries) {
+	if(entries[0].isIntersecting === true){
+
+
+    document.getElementById('portrait').classList.add('hide');
+    document.getElementById('logo').classList.remove('hide');
+  }else{
+    document.getElementById('portrait').classList.remove('hide');
+    document.getElementById('logo').classList.add('hide');
+  }
+}, { threshold: [0] });
+
+observer.observe(document.querySelector("#about"));

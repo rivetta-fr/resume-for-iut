@@ -72,7 +72,7 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #BD5D38;
+  background-color: #0e2f56;
 }
 
 .dev-icons {
@@ -80,7 +80,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #BD5D38;
+  color: #0e2f56;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -113,6 +113,16 @@ p.lead {
     max-width: 10rem;
     max-height: 10rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    width:250px;
+    height:250px;
+    animation: SHOWHIDE 4s;
+    animation-fill-mode: both
+  }
+
+  #about p{
+    text-align: justify;
+    width:40%;
+    margin: auto auto auto 0;
   }
   #sideNav .navbar-collapse {
     display: flex;
@@ -160,17 +170,48 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #BD5D38 !important;
+  background-color: #0e2f56 !important;
 }
 
 .text-primary {
-  color: #BD5D38 !important;
+  color: #0e2f56 !important;
 }
 
 a {
-  color: #BD5D38;
+  color: #0e2f56;
 }
 
 a:hover, a:focus, a:active {
   color: #824027;
+}
+
+#about{
+  background-image: url('../img/bg-cv-4.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  max-width: 100vw;
+  color: #fff;
+
+}
+#about h1{color:#fff; }
+#portrait {
+    border: 0.5rem solid #495057!important;
+}
+
+.hide{
+  display: none;
+  opacity: 0;
+}
+
+
+@keyframes SHOWHIDE {
+  from {
+      display:none;
+      opacity:0
+  }
+  to {
+      display:block;
+      opacity:1
+  }
 }
